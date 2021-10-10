@@ -1,0 +1,27 @@
+<div class="search-form">
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+        <mat-form-field class="full-width-input">
+            <input 
+                type="text" 
+                formControlName="search"
+                matInput 
+                placeholder="Search News" 
+                required
+            >
+        </mat-form-field>
+        <!--<button type="submit" mat-raised-button color="primary">Search</button>-->
+    </form>
+</div>
+<mat-grid-list cols="3" rowHeight="500px" gutterSize="15px">
+    <mat-grid-tile *ngFor="let new of news.articles" style="margin-top: 10px !important;">
+        <mat-card class="news-feed">
+            <img mat-card-image [src]="new['urlToImage']" width="432" height="243"/>
+            <mat-card-content>
+                <h3>{{ new['title'] }}</h3>
+                <h6>{{ new['author'] }}</h6>
+                <p>{{ new['content'] }}</p>
+                <p class="align-left"><a [href]="new['url']" target="_blank">Ver más</a></p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

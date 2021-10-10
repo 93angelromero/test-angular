@@ -1,0 +1,33 @@
+{
+  "name": "back-nodejs",
+  "version": "1.0.0",
+  "description": "Backend for news feed test",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+  },
+  "author": "Luis Angel Romero Escalona",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/node": "^8.10.61",
+    "ts-node-dev": "^1.0.0-pre.51",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.13.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.2.1",
+    "typeorm": "^0.2.38"
+  }
+}
